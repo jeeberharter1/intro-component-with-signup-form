@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --green-highlight: hsl(154, 88%, 61%);
+    --blue: hsl(248, 32%, 49%);
+    --blue-highlight: hsl(248, 65%, 67%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grey-blue: hsl(245, 17%, 85%);
+    --poppins: 'Poppins', sans-serif;
+}
+
+/* 
+    || Smaller screens
+*/
+@media only screen and (max-width: 900px) {
+    body {
+        text-align: center;
+    }
+    
+    .container {
+        max-width: 360px;
+    }
+
+    .text-container {
+        margin: 75px 0 50px 0;
+    }
+
+    h1 {
+        font-size: 34px;
+        line-height: 1.3;
+        margin-bottom: 0;
+    }
+
+    .text-container > p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-top: 30px;
+    }
+
+    .sign-up-form {
+        padding: 25px;
+        row-gap: 20px;
+    }
+}
+
+/* 
+    || Larger screens
+*/
+@media only screen and (min-width: 900px) {
+    body {
+        align-items: center;
+        text-align: left;
+    }
+
+    .container {
+        display: flex;
+        max-width: 1150px;
+    }
+
+    .text-container {
+        padding-right: 25px;
+        width: 50%;
+        justify-content: center;
+    }
+
+    .form-container {
+        padding-left: 25px;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-top: 0;
+    }
+
+    .text-container > p {
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .sign-up-form {
+        padding: 45px;
+        row-gap: 25px;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    font-family: var(--poppins);
+    background-color: var(--red);
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/bg-intro-desktop.png');
+}
+
+.container {
+    margin: 0 25px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;  
+}
+
+.text-container > p {
+    font-weight: 500;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-bottom: 50px;
+}
+
+.trial-btn {
+    background-color: var(--blue);
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: white;
+    font-weight: 400;
+    box-shadow: 0 8px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.trial-btn:hover {
+    background-color: var(--blue-highlight);
+}
+
+.trial-text {
+    font-weight: 700;
+}
+
+.sign-up-form {
+    background-color: white;
+    border-radius: 10px;
+    color: var(--grey-blue);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field > input::placeholder {
+    font-weight: 700;
+}
+
+.input-field > input {
+    color: var(--dark-blue);
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid var(--grey-blue);
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    padding: 15px;
+}
+
+.input-field > input:focus {
+    border: 1px solid var(--dark-blue);
+}
+
+.input-field > img {
+    position: absolute;
+    top: 17px;
+    right: 30px;
+    display: none;
+}
+
+.input-field > small {
+    float: right;
+    padding-top: 7px;
+    color: var(--red);
+    font-style: italic;
+    display: none;
+}
+
+.input-field.error input {
+    border: 2px solid var(--red);
+}
+
+.input-field.error img {
+    display: block;
+}
+
+.input-field.error small {
+    display: block;
+}
+
+.submit-btn {
+    background-color: var(--green);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px hsl(154, 57%, 41%);
+    width: 100%;
+    padding: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: var(--green-highlight);
+}
+
+.service-agreement {
+    font-size: 12px;
+    padding: 0 20px;
+    text-align: center;
+    margin: -5px 0 -5px 0;
+    line-height: 1.8;
+}
+
+.terms {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 700;
+}
